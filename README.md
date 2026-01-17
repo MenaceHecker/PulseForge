@@ -28,7 +28,7 @@ Client → API → Event Ingestion → Async Processor → Database → Query AP
 
 ## Project Status
 
-🚧 Phase 1 — Core ingestion and authentication (in progress)
+Phase 1 — Core ingestion and authentication (in progress)
 
 ## Planned Features
 
