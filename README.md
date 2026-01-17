@@ -36,4 +36,4 @@ Phase 1 — Core ingestion and authentication (in progress)
 - Async processing with retries
 - Dead-letter handling
 - User and admin APIs
-- Metrics and structured logging
+- Metrics and structured logging actively
