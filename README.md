@@ -37,3 +37,4 @@ Phase 1 — Core ingestion and authentication (in progress)
 - Dead-letter handling
 - User and admin APIs
 - Metrics and structured logging actively
+- Setting up maven config
