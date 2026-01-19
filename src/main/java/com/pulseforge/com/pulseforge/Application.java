@@ -1,4 +1,4 @@
-package com.pulseforge.com.pulseforge;
+package com.pulseforge;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
