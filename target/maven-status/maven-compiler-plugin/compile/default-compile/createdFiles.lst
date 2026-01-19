@@ -1,0 +1,7 @@
+com/pulseforge/domain/enums/EventStatus.class
+com/pulseforge/repository/UserRepository.class
+com/pulseforge/domain/enums/Role.class
+com/pulseforge/repository/EventRepository.class
+com/pulseforge/domain/UserEntity.class
+com/pulseforge/domain/EventEntity.class
+com/pulseforge/Application.class
