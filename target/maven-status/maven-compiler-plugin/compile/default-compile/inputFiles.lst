@@ -1,1 +1,5 @@
 /Users/tm2508/Documents/PulseForge/src/main/java/com/pulseforge/Application.java
+/Users/tm2508/Documents/PulseForge/src/main/java/com/pulseforge/domain/EventEntity.java
+/Users/tm2508/Documents/PulseForge/src/main/java/com/pulseforge/domain/UserEntity.java
+/Users/tm2508/Documents/PulseForge/src/main/java/com/pulseforge/repository/EventRepository.java
+/Users/tm2508/Documents/PulseForge/src/main/java/com/pulseforge/repository/UserRepository.java
