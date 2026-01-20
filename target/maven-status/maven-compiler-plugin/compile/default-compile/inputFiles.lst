@@ -5,3 +5,4 @@
 /Users/tm2508/Documents/PulseForge/src/main/java/com/pulseforge/domain/enums/Role.java
 /Users/tm2508/Documents/PulseForge/src/main/java/com/pulseforge/repository/EventRepository.java
 /Users/tm2508/Documents/PulseForge/src/main/java/com/pulseforge/repository/UserRepository.java
+/Users/tm2508/Documents/PulseForge/src/main/java/com/pulseforge/security/SecurityConfig.java
