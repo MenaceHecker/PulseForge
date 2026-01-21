@@ -41,4 +41,15 @@ public class AuthService {
 
         return jwtUtil.generateToken(user.getEmail());
     }
+    public String login(LoginRequest request) {
+
+        UserEntity user = userRepository.findByEmail(request.email())
+                .orElseThrow(() -> new IllegalStateException("Invalid credentials"));
+
+        if (!passwordEncoder.matches(request.password(), user.getPassword())) {
+            throw new IllegalStateException("Invalid credentials");
+        }
+
+        return jwtUtil.generateToken(user.getEmail());
+    }
 }
