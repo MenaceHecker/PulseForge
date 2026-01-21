@@ -20,6 +20,10 @@ public class UserEntity {
     @Column(name = "password_hash", nullable = false)
     private String passwordHash;
 
+    //Undecided whether to store raw password or hash it
+    //@Column(nullable = false)
+    //private String password;
+
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private Role role;
