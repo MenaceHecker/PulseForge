@@ -25,4 +25,20 @@ public class AuthService {
         this.passwordEncoder = passwordEncoder;
         this.jwtUtil = jwtUtil;
     }
+    public String register(RegisterRequest request) {
+
+        if (userRepository.existsByEmail(request.email())) {
+            throw new IllegalStateException("Email already registered");
+        }
+
+        UserEntity user = new UserEntity();
+        user.setEmail(request.email());
+        user.setName(request.name());
+        user.setPassword(passwordEncoder.encode(request.password()));
+        user.setRole(Role.USER);
+
+        userRepository.save(user);
+
+        return jwtUtil.generateToken(user.getEmail());
+    }
 }
