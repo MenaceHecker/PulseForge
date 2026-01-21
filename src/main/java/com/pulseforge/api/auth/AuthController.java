@@ -15,4 +15,8 @@ public class AuthController {
     public AuthController(AuthService authService) {
         this.authService = authService;
     }
+    PostMapping("/register")
+    public AuthResponse register(@Valid @RequestBody RegisterRequest request) {
+        return new AuthResponse(authService.register(request));
+    }
 }
