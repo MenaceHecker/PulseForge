@@ -4,7 +4,7 @@ import com.pulseforge.api.auth.dto.LoginRequest;
 import com.pulseforge.api.auth.dto.RegisterRequest;
 import com.pulseforge.domain.UserEntity;
 import com.pulseforge.domain.enums.Role;
-import com.pulseforge.domain.repository.UserRepository;
+import com.pulseforge.repository.UserRepository;
 import com.pulseforge.security.jwt.JwtUtil;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -34,7 +34,7 @@ public class AuthService {
         UserEntity user = new UserEntity();
         user.setEmail(request.email());
         user.setName(request.name());
-        user.setPassword(passwordEncoder.encode(request.password()));
+        user.setPasswordHash(passwordEncoder.encode(request.password()));
         user.setRole(Role.USER);
 
         userRepository.save(user);
@@ -46,7 +46,7 @@ public class AuthService {
         UserEntity user = userRepository.findByEmail(request.email())
                 .orElseThrow(() -> new IllegalStateException("Invalid credentials"));
 
-        if (!passwordEncoder.matches(request.password(), user.getPassword())) {
+        if (!passwordEncoder.matches(request.password(), user.getPasswordHash())) {
             throw new IllegalStateException("Invalid credentials");
         }
 

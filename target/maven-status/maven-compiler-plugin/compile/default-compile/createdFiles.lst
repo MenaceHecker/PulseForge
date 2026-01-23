@@ -1,10 +1,15 @@
 com/pulseforge/repository/UserRepository.class
+com/pulseforge/api/auth/dto/LoginRequest.class
 com/pulseforge/domain/enums/Role.class
 com/pulseforge/domain/UserEntity.class
+com/pulseforge/api/auth/AuthController.class
 com/pulseforge/domain/EventEntity.class
+com/pulseforge/api/auth/dto/RegisterRequest.class
 com/pulseforge/Application.class
 com/pulseforge/domain/enums/EventStatus.class
 com/pulseforge/security/SecurityConfig.class
 com/pulseforge/repository/EventRepository.class
 com/pulseforge/security/jwt/JwtUtil.class
 com/pulseforge/security/PasswordConfig.class
+com/pulseforge/api/auth/dto/AuthResponse.class
+com/pulseforge/api/auth/AuthService.class
