@@ -4,12 +4,14 @@
 /Users/tm2508/Documents/PulseForge/src/main/java/com/pulseforge/api/auth/dto/AuthResponse.java
 /Users/tm2508/Documents/PulseForge/src/main/java/com/pulseforge/api/auth/dto/LoginRequest.java
 /Users/tm2508/Documents/PulseForge/src/main/java/com/pulseforge/api/auth/dto/RegisterRequest.java
+/Users/tm2508/Documents/PulseForge/src/main/java/com/pulseforge/api/auth/dto/UserResponse.java
+/Users/tm2508/Documents/PulseForge/src/main/java/com/pulseforge/api/user/UserController.java
 /Users/tm2508/Documents/PulseForge/src/main/java/com/pulseforge/domain/EventEntity.java
 /Users/tm2508/Documents/PulseForge/src/main/java/com/pulseforge/domain/UserEntity.java
 /Users/tm2508/Documents/PulseForge/src/main/java/com/pulseforge/domain/enums/EventStatus.java
 /Users/tm2508/Documents/PulseForge/src/main/java/com/pulseforge/domain/enums/Role.java
+/Users/tm2508/Documents/PulseForge/src/main/java/com/pulseforge/domain/repository/UserRepository.java
 /Users/tm2508/Documents/PulseForge/src/main/java/com/pulseforge/repository/EventRepository.java
-/Users/tm2508/Documents/PulseForge/src/main/java/com/pulseforge/repository/UserRepository.java
 /Users/tm2508/Documents/PulseForge/src/main/java/com/pulseforge/security/PasswordConfig.java
 /Users/tm2508/Documents/PulseForge/src/main/java/com/pulseforge/security/SecurityConfig.java
 /Users/tm2508/Documents/PulseForge/src/main/java/com/pulseforge/security/jwt/JwtUtil.java

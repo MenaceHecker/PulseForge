@@ -4,7 +4,7 @@ import com.pulseforge.api.auth.dto.LoginRequest;
 import com.pulseforge.api.auth.dto.RegisterRequest;
 import com.pulseforge.domain.UserEntity;
 import com.pulseforge.domain.enums.Role;
-import com.pulseforge.repository.UserRepository;
+import com.pulseforge.domain.repository.UserRepository;
 import com.pulseforge.security.jwt.JwtUtil;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;

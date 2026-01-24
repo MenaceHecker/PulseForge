@@ -1,4 +1,4 @@
-package com.pulseforge.repository;
+package com.pulseforge.domain.repository;
 
 import com.pulseforge.domain.UserEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
