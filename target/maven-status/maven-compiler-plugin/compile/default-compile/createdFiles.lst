@@ -8,7 +8,6 @@ com/pulseforge/Application.class
 com/pulseforge/api/user/dto/UserResponse.class
 com/pulseforge/domain/enums/EventStatus.class
 com/pulseforge/api/user/UserController.class
-com/pulseforge/security/SecurityConfig.class
 com/pulseforge/repository/EventRepository.class
 com/pulseforge/security/jwt/JwtUtil.class
 com/pulseforge/security/PasswordConfig.class
