@@ -12,7 +12,9 @@
 /Users/tm2508/Documents/PulseForge/src/main/java/com/pulseforge/domain/enums/Role.java
 /Users/tm2508/Documents/PulseForge/src/main/java/com/pulseforge/domain/repository/UserRepository.java
 /Users/tm2508/Documents/PulseForge/src/main/java/com/pulseforge/repository/EventRepository.java
+/Users/tm2508/Documents/PulseForge/src/main/java/com/pulseforge/security/CustomUserDetailsService.java
 /Users/tm2508/Documents/PulseForge/src/main/java/com/pulseforge/security/JwtAuthFilter.java
+/Users/tm2508/Documents/PulseForge/src/main/java/com/pulseforge/security/JwtService.java
 /Users/tm2508/Documents/PulseForge/src/main/java/com/pulseforge/security/PasswordConfig.java
 /Users/tm2508/Documents/PulseForge/src/main/java/com/pulseforge/security/SecurityConfig.java
 /Users/tm2508/Documents/PulseForge/src/main/java/com/pulseforge/security/jwt/JwtUtil.java

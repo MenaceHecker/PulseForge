@@ -1,54 +1,57 @@
 package com.pulseforge.domain;
 
-import com.pulseforge.domain.enums.Role;
 import jakarta.persistence.*;
-
-import java.time.Instant;
-import java.util.UUID;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
 
 @Entity
 @Table(name = "users")
 public class UserEntity {
 
     @Id
-    @Column(nullable = false, updatable = false)
-    private UUID id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-    @Column(nullable = false, unique = true)
+    @Email
+    @NotBlank
+    @Column(unique = true, nullable = false)
     private String email;
 
+    @NotBlank
+    @Column(nullable = false)
+    private String password;
+
+    @NotBlank
     @Column(nullable = false)
     private String name;
 
-    @Column(name = "password_hash", nullable = false)
-    private String passwordHash;
-
-    //Undecided whether to store raw password or hash it
-    //@Column(nullable = false)
-    //private String password;
-
-    @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
-    private Role role;
-
-    @Column(name = "created_at", nullable = false, updatable = false)
-    private Instant createdAt;
-
-    @PrePersist
-    void onCreate() {
-        this.id = UUID.randomUUID();
-        this.createdAt = Instant.now();
+    // ✅ REQUIRED getters
+    public Long getId() {
+        return id;
     }
 
-    // getters & setters
-    public UUID getId() { return id; }
-    public String getEmail() { return email; }
-    public void setEmail(String email) { this.email = email; }
-    public String getName() { return name; }
-    public void setName(String name) { this.name = name; }
-    public String getPasswordHash() { return passwordHash; }
-    public void setPasswordHash(String passwordHash) { this.passwordHash = passwordHash; }
-    public Role getRole() { return role; }
-    public void setRole(Role role) { this.role = role; }
-    public Instant getCreatedAt() { return createdAt; }
+    public String getEmail() {
+        return email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    // setters (you already rely on these)
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }
