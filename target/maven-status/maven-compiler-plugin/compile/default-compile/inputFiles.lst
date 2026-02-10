@@ -1,6 +1,7 @@
 /Users/tm2508/Documents/PulseForge/src/main/java/com/pulseforge/Application.java
 /Users/tm2508/Documents/PulseForge/src/main/java/com/pulseforge/api/auth/AuthController.java
 /Users/tm2508/Documents/PulseForge/src/main/java/com/pulseforge/api/auth/AuthService.java
+/Users/tm2508/Documents/PulseForge/src/main/java/com/pulseforge/api/auth/Role.java
 /Users/tm2508/Documents/PulseForge/src/main/java/com/pulseforge/api/auth/dto/AuthResponse.java
 /Users/tm2508/Documents/PulseForge/src/main/java/com/pulseforge/api/auth/dto/LoginRequest.java
 /Users/tm2508/Documents/PulseForge/src/main/java/com/pulseforge/api/auth/dto/RegisterRequest.java

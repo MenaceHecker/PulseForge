@@ -25,7 +25,6 @@ public class UserEntity {
     @Column(nullable = false)
     private String name;
 
-    // ✅ REQUIRED getters
     public Long getId() {
         return id;
     }
@@ -42,7 +41,6 @@ public class UserEntity {
         return name;
     }
 
-    // setters (you already rely on these)
     public void setEmail(String email) {
         this.email = email;
     }

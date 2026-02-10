@@ -34,7 +34,7 @@ public class AuthService {
         UserEntity user = new UserEntity();
         user.setEmail(request.email());
         user.setName(request.name());
-        user.setPasswordHash(passwordEncoder.encode(request.password()));
+        user.setPassword(passwordEncoder.encode(request.password()));
         user.setRole(Role.USER);
 
         userRepository.save(user);
@@ -46,7 +46,7 @@ public class AuthService {
         UserEntity user = userRepository.findByEmail(request.email())
                 .orElseThrow(() -> new IllegalStateException("Invalid credentials"));
 
-        if (!passwordEncoder.matches(request.password(), user.getPasswordHash())) {
+        if (!passwordEncoder.matches(request.password(), user.getPassword())) {
             throw new IllegalStateException("Invalid credentials");
         }
 
