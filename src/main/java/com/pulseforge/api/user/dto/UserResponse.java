@@ -3,7 +3,7 @@ package com.pulseforge.api.user.dto;
 import java.util.UUID;
 
 public record UserResponse(
-        UUID id,
+        Long id,
         String email,
         String name
 ) {}

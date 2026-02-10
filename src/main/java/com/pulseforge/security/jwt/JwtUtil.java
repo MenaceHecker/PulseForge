@@ -1,5 +1,6 @@
 package com.pulseforge.security.jwt;
 
+import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
 import org.springframework.stereotype.Component;
@@ -10,28 +11,26 @@ import java.util.Date;
 @Component
 public class JwtUtil {
 
-    private static final String SECRET =
-            "pulseforge-super-secret-key-pulseforge-super-secret-key";
+    private static final SecretKey KEY =
+            Keys.hmacShaKeyFor("ultra-secret-key-super-secret-key".getBytes());
 
-    private static final long EXPIRATION_MS = 24 * 60 * 60 * 1000;
-
-    private final SecretKey key = Keys.hmacShaKeyFor(SECRET.getBytes());
+    private static final long EXPIRATION_MS = 1000L * 60 * 60 * 24;
 
     public String generateToken(String email) {
         return Jwts.builder()
-                .subject(email)
-                .issuedAt(new Date())
-                .expiration(new Date(System.currentTimeMillis() + EXPIRATION_MS))
-                .signWith(key)
+                .setSubject(email)
+                .setIssuedAt(new Date())
+                .setExpiration(new Date(System.currentTimeMillis() + EXPIRATION_MS))
+                .signWith(KEY)
                 .compact();
     }
 
     public String extractEmail(String token) {
-        return Jwts.parser()
-                .verifyWith(key)
+        Claims claims = Jwts.parserBuilder()
+                .setSigningKey(KEY)
                 .build()
-                .parseSignedClaims(token)
-                .getPayload()
-                .getSubject();
+                .parseClaimsJws(token)
+                .getBody();
+        return claims.getSubject();
     }
 }
