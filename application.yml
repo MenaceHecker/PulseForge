@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/pulseforge
-    username: pulseforge_user
-    password: pulseforge_pass
+    url: jdbc:postgresql://localhost:5434/pulseforge
+    username: pulseforge
+    password: pulseforge
 
   jpa:
     hibernate:
